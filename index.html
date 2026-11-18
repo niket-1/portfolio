@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Niket Sonawane | Cloud & DevOps Engineer</title>
+<meta name="description" content="Portfolio of Niket Sonawane - Cloud & DevOps Engineer building resilient multi-cloud platforms on Azure and AWS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="progress" id="progress"></div>
+<div class="cursor-glow" id="glow"></div>
+
+<header class="nav" id="nav">
+  <a href="#home" class="logo">&lt;NS<span>/</span>&gt;</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav id="menu">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#stack">Stack</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact" class="btn-sm">Let's talk</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <p class="chip reveal"><span class="dot"></span> Open for relocation · Pune, India</p>
+    <h1 class="reveal">Hi, I'm <span class="grad">Niket Sonawane</span></h1>
+    <h2 class="reveal"><span id="typed"></span><span class="caret">|</span></h2>
+    <p class="lead reveal">I build clouds that don't go down. I design, automates and secures multi-cloud platforms on Azure and AWS. Landing zones, serverless apps, Kubernetes and pipelines that ship without downtime.</p>
+    <div class="cta reveal">
+      <a href="#projects" class="btn primary">Explore my work</a>
+      <a href="#contact" class="btn ghost">Get in touch</a>
+      <a href="https://linkedin.com/in/niket-sonawane" target="_blank" rel="noopener" class="btn ghost">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="terminal reveal">
+    <div class="t-bar"><i></i><i></i><i></i><span>niket@cloud:~</span></div>
+    <pre id="term"></pre>
+  </div>
+  <a href="#about" class="scroll">scroll<span></span></a>
+</section>
+
+<section class="stats">
+  <div class="stat reveal"><b data-count="4" data-suffix="+">0</b><span>Years in cloud</span></div>
+  <div class="stat reveal"><b data-count="99.99" data-dec="2" data-suffix="%">0</b><span>Availability delivered</span></div>
+  <div class="stat reveal"><b data-count="1000" data-suffix="+">0</b><span>Servers operated</span></div>
+  <div class="stat reveal"><b data-count="35" data-suffix="%">0</b><span>Infra cost reduced</span></div>
+  <div class="stat reveal"><b data-count="8" data-suffix="">0</b><span>Cloud certifications</span></div>
+</section>
+
+<section id="about" class="sec">
+  <h3 class="title reveal"><span>01.</span> What I do</h3>
+  <p class="intro reveal">I turn messy, manual infrastructure into clean, repeatable and observable platforms. Reliability, security and cost are designed in, not bolted on.</p>
+  <div class="grid three">
+    <div class="card tilt reveal"><div class="big">🏗️</div><h4>Architect</h4><p>Landing zones, hub-spoke networks and serverless-first designs across Azure and AWS.</p></div>
+    <div class="card tilt reveal"><div class="big">🤖</div><h4>Automate</h4><p>Everything as code with Terraform, ARM and CloudFormation, shipped by GitHub Actions and Azure DevOps.</p></div>
+    <div class="card tilt reveal"><div class="big">🛡️</div><h4>Run &amp; Secure</h4><p>Zero-downtime releases, policy guardrails, observability and fast incident recovery.</p></div>
+  </div>
+</section>
+
+<section id="projects" class="sec">
+  <h3 class="title reveal"><span>02.</span> Featured projects</h3>
+
+  <article class="case reveal">
+    <div class="case-info">
+      <span class="label az">Azure · Governance</span>
+      <h4>Enterprise Azure Landing Zone</h4>
+      <p>A secure, governed foundation for hosting workloads at scale, built once as code and reused for every new team and subscription.</p>
+      <ul>
+        <li>Hub-and-spoke network topology with centralized connectivity and controlled egress.</li>
+        <li>Management groups and subscription layout with Azure Policy guardrails enforced from day one.</li>
+        <li>Entra ID RBAC, service principals and least-privilege access baked into the template.</li>
+        <li>Reusable Terraform / ARM modules deployed through Azure DevOps pipelines.</li>
+        <li>Central logging and monitoring with Log Analytics and Azure Monitor.</li>
+      </ul>
+      <div class="tags"><em>Terraform</em><em>ARM</em><em>Azure Policy</em><em>Entra ID</em><em>VNet</em><em>Azure DevOps</em></div>
+    </div>
+    <div class="diagram" aria-label="Azure landing zone architecture">
+      <div class="node-box top">Management Groups + Azure Policy</div>
+      <div class="arrow">↓</div>
+      <div class="node-box hub">Hub VNet · Firewall · Gateway</div>
+      <div class="arrow">↓ peering</div>
+      <div class="row"><div class="node-box">Prod spoke</div><div class="node-box">Dev spoke</div><div class="node-box">Shared services</div></div>
+      <div class="arrow">↓</div>
+      <div class="node-box mon">Log Analytics · Azure Monitor</div>
+    </div>
+  </article>
+
+  <article class="case flip reveal">
+    <div class="case-info">
+      <span class="label aws">AWS · Serverless</span>
+      <h4>HR Bot Infrastructure on AWS</h4>
+      <p>Cloud foundation for an HR assistant bot that answers employee queries, built serverless, secure and cheap to run.</p>
+      <ul>
+        <li>Event-driven backend using API Gateway, Lambda, SQS, SNS and Step Functions.</li>
+        <li>Static front end served through S3 and CloudFront.</li>
+        <li>IAM least-privilege roles, secrets kept out of code, tight network boundaries.</li>
+        <li>Entire stack described in CloudFormation / Terraform and deployed via CI/CD.</li>
+        <li>CloudWatch dashboards and alarms for proactive monitoring.</li>
+      </ul>
+      <div class="tags"><em>API Gateway</em><em>Lambda</em><em>Step Functions</em><em>SQS/SNS</em><em>CloudFront</em><em>CloudFormation</em></div>
+    </div>
+    <div class="diagram" aria-label="AWS HR bot architecture">
+      <div class="node-box top">Employee · Web / Chat</div>
+      <div class="arrow">↓</div>
+      <div class="row"><div class="node-box">CloudFront + S3</div><div class="node-box">API Gateway</div></div>
+      <div class="arrow">↓</div>
+      <div class="node-box hub">Lambda · Step Functions</div>
+      <div class="arrow">↓</div>
+      <div class="row"><div class="node-box">SQS / SNS</div><div class="node-box">EventBridge</div><div class="node-box">IAM</div></div>
+      <div class="arrow">↓</div>
+      <div class="node-box mon">CloudWatch Logs &amp; Alarms</div>
+    </div>
+  </article>
+
+  <div class="grid projects">
+    <article class="card tilt reveal"><div class="big">🔵🟢</div><h4>Zero-Downtime Blue-Green Releases</h4><p>Upgraded core application servers with a blue-green strategy and traffic switching through Azure Application Gateway, keeping 100% availability during maintenance.</p><div class="tags"><em>App Gateway</em><em>Blue-Green</em><em>Azure</em></div></article>
+    <article class="card tilt reveal"><div class="big">☁️➡️☁️</div><h4>On-Prem to AWS Migration</h4><p>Led a serverless-first migration that cut infrastructure costs by 35%.</p><div class="tags"><em>Lambda</em><em>S3</em><em>Migration</em></div></article>
+    <article class="card tilt reveal"><div class="big">💸</div><h4>Cost Optimization Automation</h4><p>PowerShell automation that schedules VM shutdown and startup, saving 25% across prod and dev.</p><div class="tags"><em>PowerShell</em><em>Azure</em></div></article>
+    <article class="card tilt reveal"><div class="big">⚙️</div><h4>CI/CD Platform</h4><p>End-to-end pipelines with GitHub Actions and Azure DevOps, plus Terraform and CloudFormation to remove configuration drift.</p><div class="tags"><em>GitHub Actions</em><em>Terraform</em></div></article>
+    <article class="card tilt reveal"><div class="big">🐳</div><h4>Kubernetes Microservices</h4><p>Docker image lifecycle and microservices on EKS and AKS for high availability and scale.</p><div class="tags"><em>Docker</em><em>EKS</em><em>AKS</em></div></article>
+    <article class="card tilt reveal"><div class="big">📡</div><h4>Observability &amp; Incident Response</h4><p>CloudWatch, Prometheus, Grafana and Azure Monitor pipelines that lowered MTTR and powered RCA on critical systems.</p><div class="tags"><em>Prometheus</em><em>Grafana</em><em>Azure Monitor</em></div></article>
+  </div>
+</section>
+
+<section id="stack" class="sec">
+  <h3 class="title reveal"><span>03.</span> Toolbox</h3>
+  <div class="marquee reveal"><div class="track">
+    <span>AWS</span><span>Azure</span><span>Terraform</span><span>CloudFormation</span><span>ARM</span><span>Kubernetes</span><span>Docker</span><span>GitHub Actions</span><span>Azure DevOps</span><span>Jenkins</span><span>Python</span><span>PowerShell</span><span>Bash</span><span>Prometheus</span><span>Grafana</span><span>Lambda</span><span>EKS</span><span>AKS</span>
+    <span>AWS</span><span>Azure</span><span>Terraform</span><span>CloudFormation</span><span>ARM</span><span>Kubernetes</span><span>Docker</span><span>GitHub Actions</span><span>Azure DevOps</span><span>Jenkins</span><span>Python</span><span>PowerShell</span><span>Bash</span><span>Prometheus</span><span>Grafana</span><span>Lambda</span><span>EKS</span><span>AKS</span>
+  </div></div>
+  <div class="grid skills">
+    <div class="card tilt reveal"><h4>🟧 AWS</h4><div class="tags"><em>EC2</em><em>EKS</em><em>S3</em><em>IAM</em><em>Lambda</em><em>API Gateway</em><em>CloudFront</em><em>CloudWatch</em><em>SQS</em><em>SNS</em><em>Step Functions</em><em>EventBridge</em></div></div>
+    <div class="card tilt reveal"><h4>🟦 Azure</h4><div class="tags"><em>VMs</em><em>VNet</em><em>AKS</em><em>Entra ID</em><em>Application Gateway</em><em>Storage</em><em>SQL</em><em>AI Foundry</em></div></div>
+    <div class="card tilt reveal"><h4>🔐 Security &amp; Networking</h4><div class="tags"><em>IAM / RBAC</em><em>Security Groups</em><em>NAT Gateway</em><em>SSL/TLS</em><em>VPC</em><em>Subnets</em></div></div>
+  </div>
+</section>
+
+<section id="journey" class="sec">
+  <h3 class="title reveal"><span>04.</span> Journey</h3>
+  <div class="timeline">
+    <div class="job reveal">
+      <div class="node"></div>
+      <div class="job-head"><h4>Senior Cloud &amp; DevOps Engineer</h4><span class="co">Wipro</span><span class="date">Jul 2022 – Present</span></div>
+      <ul>
+        <li>Run SaaS infrastructure across AWS &amp; Azure at <b>99.99% availability</b> for global enterprise clients.</li>
+        <li>Maintain a <b>90%+ security &amp; compliance score</b> with automated secret management and policy governance.</li>
+        <li>Write reusable IaC modules and incident runbooks used across teams.</li>
+      </ul>
+    </div>
+    <div class="job reveal">
+      <div class="node"></div>
+      <div class="job-head"><h4>Software Developer Intern</h4><span class="co">Sumago Infotech</span><span class="date">Feb – Apr 2022</span></div>
+      <ul><li>Automated background jobs and log aggregation with Python and PowerShell.</li></ul>
+    </div>
+  </div>
+
+  <div class="grid two">
+    <div class="card reveal"><h4>🏅 Recognition</h4>
+      <div class="awards"><div class="award"><b>2023</b> Key Contributor</div><div class="award"><b>2024</b> Best Employee, Division Two</div><div class="award"><b>2025</b> Best Project Engineer</div></div>
+    </div>
+    <div class="card reveal"><h4>🎓 Education</h4>
+      <p><b>B.Tech, Information Systems &amp; Tech</b> · BITS Pilani · CGPA 8.2</p>
+      <p><b>Diploma in IT</b> · Govt. Polytechnic, Aurangabad · CGPA 9.1</p>
+    </div>
+  </div>
+
+  <h4 class="sub reveal">Certifications</h4>
+  <div class="badges reveal">
+    <span class="az">AZ-305 Solutions Architect Expert</span><span class="az">AZ-400 DevOps Engineer</span><span class="az">AZ-104 Administrator</span><span class="az">AZ-700 Network Engineer</span><span class="az">AZ-204 Developer</span><span class="az">AZ-900 Fundamentals</span><span class="aws">AWS Solutions Architect Associate</span><span class="aws">AWS Cloud Practitioner</span>
+  </div>
+</section>
+
+<section id="contact" class="sec contact">
+  <h3 class="title reveal"><span>05.</span> Let's build something reliable</h3>
+  <p class="reveal">Open to Cloud / DevOps / Solutions Architect roles and happy to relocate.</p>
+  <div class="cta reveal">
+    <a class="btn primary" href="#contact" id="mailBtn">✉ Email me</a>
+    <a class="btn ghost" href="#contact" id="callBtn">📞 Call me</a>
+    <a class="btn ghost" href="https://linkedin.com/in/niket-sonawane" target="_blank" rel="noopener">in LinkedIn</a>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> Niket Sonawane · Built with HTML, CSS &amp; JS</footer>
+<script src="script.js"></script>
+</body>
+</html>
